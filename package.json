@@ -1,0 +1,37 @@
+{
+  "name": "hotel-automation-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Automation and intelligence layer for hotels: operations, HR, finance, sales, marketing, and CRM.",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "eslint .",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,json,md,yml,yaml}": "prettier --write",
+    "*.{ts,tsx}": "eslint --fix"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@commitlint/cli": "^19",
+    "@commitlint/config-conventional": "^19",
+    "@eslint/js": "^9",
+    "eslint": "^9",
+    "husky": "^9",
+    "lint-staged": "^15",
+    "prettier": "^3",
+    "turbo": "^2",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8"
+  }
+}
